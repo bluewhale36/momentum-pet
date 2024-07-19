@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Pet</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/momentum-removebg-preview.png">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="./css/signin_info.css">
+
+<body>
+    <header class="main-background-color" id="header">
+        <span id="member">
+            <a href="login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0" />
+                </svg>
+            </a>
+        </span>
+        <h1>Momentum Pet</h1>
+    </header>
+    <nav id="nav" class="main-background-color">
+        <a href="mainpage.html">홈</a>
+        <a href="intro.html">소개</a>
+        <a href="doyouknow.html">애완동물이해하기</a>
+        <a href="pets.html">반려견보기</a>
+        <a href="adoption.html">입양신청</a>
+        <a href="heart.html">관심반려견</a>
+        <a href="search.html">반려견검색</a>
+    </nav>
+    <main>
+        <h3 style="margin-top: 15px;">
+            회원가입
+        </h3>
+        <div id="progress">
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+                class="bi bi-check-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                <path
+                    d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-three-dots"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+                class="bi bi-2-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-three-dots"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-3-circle"
+                viewBox="0 0 16 16">
+                <path
+                    d="M7.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318" />
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8" />
+            </svg>
+        </div>
+        <div id="info">
+            <table>
+                <caption style="color: red; visibility: hidden;">caution<br>message<br>test</caption>
+                <tr>
+                    <th style="width: 25%;">성명<span style="color: rgb(255, 0, 0, 0.8);">(필수)</span></th>
+                    <td colspan="2">
+                        <input type="text" name="name" id="nametext">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="width: 10%;">주민등록번호<span style="color: rgb(255, 0, 0, 0.8);">(필수)</span></th>
+                    <td style="width: 40%;" colspan="2">
+                        <input type="text" name="idnum" id="idnumtext" placeholder="'-' 제외 숫자만 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호<span style="color: rgb(255, 0, 0, 0.8);">(필수)</span></th>
+                    <td colspan="2">
+                        <input type="tel" name="tel" id="teltext" placeholder="'-' 제외 숫자만 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td colspan="2">
+                        <input type="email" name="email" id="emailtext">
+                    </td>
+                </tr>
+                <tr style="border: none;">
+                    <th rowspan="2">주소<span style="color: rgb(255, 0, 0, 0.8);">(필수)</span></th>
+                    <td style="width: 60%;">
+                        <input type="text" name="postcode" id="postcodetext" placeholder="우편번호 5자리">
+                    </td>
+                    <td>
+                        <input type="button" value="우편번호검색" id="postcodechk">
+                        <input type="hidden" value="1" id="postcodechkval">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="addr" id="addrtext" placeholder="상세주소까지 기입">
+                    </td>
+                </tr>
+                <tr>
+                    <th>아이디<span style="color: rgb(255, 0, 0, 0.8);">(필수)</span></th>
+                    <td>
+                        <input type="text" name="id" id="idtext">
+
+                    </td>
+                    <td>
+                        <input type="button" value="중복 체크" id="idchk">
+                        <input type="hidden" value="1" id="idchkval">
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호<span style="color: rgb(255, 0, 0, 0.8);">(필수)</span></th>
+                    <td colspan="2">
+                        <input type="password" name="pass" id="passtext">
+                    </td>
+                </tr>
+
+            </table>
+            <div class="cont">
+                <input type="button" value="이전" id="prevbtn">
+                <input type="button" value="다음" id="nextbtn">
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <small>
+            상호명 : Momentum Pet<br>
+            대표자 : 홍길동<br>
+            주소 : 경기도 수원시 팔달구 중부대로104 (풍림빌딩 신관, 3층)<br>
+            사업자등록번호 : 000-00-00000<br>
+            동물판매허가번호 : 0000000-000-0000-0000
+        </small>
+    </footer>
+</body>
+
+</html>
+
+<script>
+
+    const applyData = $('#info td :not(input[type=button], input[type=email]');
+
+    $('#idchk').on('click', function () {
+        $('#idchkval').val(2);
+    });
+
+    $('#postcodechk').on('click', function () {
+        $('#postcodechkval').val(2);
+    })
+
+    $('#prevbtn').on('click', function () {
+        if (confirm('진행상황이 저장되지 않습니다. 이전 페이지로 돌아가시겠습니까?')) {
+            $(location).attr('href', 'signin.html');
+        }
+    })
+
+    $('#nextbtn').on('click', function () { erase(); validation(); });
+
+    function erase() {
+        $('#info caption').css('visibility', 'hidden');
+        $('#info caption').html('caution<br>message<br>test');
+    }
+
+    function validation() {
+        let cnt = 0;
+        $.each(applyData, function (i, item) {
+            if (item.value.length != 0) {
+                let spCnt = 0;
+                for (let j = 0; j < item.value.length; j++) {
+                    if (item.value.charAt(j) == ' ') { spCnt++; }
+                }
+                if (item.value.length != spCnt) { cnt++; }
+            }
+        });
+        let numValid = /^[0-9]*$/;
+        let idnumtext = $('#idnumtext').val();
+        let teltext = $('#teltext').val();
+        let postcodetext = $('#postcodetext').val();
+        if (numValid.test(idnumtext) && numValid.test(teltext) && numValid.test(postcodetext)) { cnt++; }
+        console.log(cnt);
+        if (cnt == 10 && $('#idchkval').val() == 2 && $('#postcodechkval').val() == 2) {
+            $(location).attr('href', 'signin_complete.html');
+        } else {
+            $('#info caption').css('visibility', 'visible');
+            $('#info caption').html('입력되지 않거나 공백으로 입력된 항목이 존재합니다.<br>또는 주민등록번호, 전화번호, 우편번호가 숫자로만 이루어지지 않았거나<br>우편번호 및 아이디 중복을 확인하지 않았습니다.')
+        }
+    }
+
+</script>

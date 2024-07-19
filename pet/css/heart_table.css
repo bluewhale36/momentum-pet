@@ -1,0 +1,35 @@
+#heart_table {
+    display: inline-block;
+    width: inherit;
+    height: fit-content;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#heart_table th {
+    height: fit-content;
+    border-bottom: 3px solid black;
+}
+
+#heart_table td {
+    height: fit-content;
+    vertical-align: top;
+    border-bottom: 1px solid black;
+    border-spacing: 0px;
+}
+
+#heart_table th,
+td {
+    padding: 10px 0px;
+}
+
+#heart_table .td_img {
+    width: 30%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#heart_table .td_img img {
+    width: 100%;
+    object-fit: fill;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Pet</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/momentum-removebg-preview.png">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="./css/adoption.css">
+
+<body>
+    <header class="main-background-color" id="header">
+        <span id="member">
+            <a href="login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-person-vcard" viewBox="0 0 16 16">
+                    <path
+                        d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5M9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8m1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5" />
+                    <path
+                        d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96q.04-.245.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 1 1 12z" />
+                </svg>
+            </a>
+        </span>
+        <h1>Momentum Pet</h1>
+    </header>
+    <nav id="nav" class="main-background-color">
+        <a href="mainpage.html">홈</a>
+        <a href="intro.html">소개</a>
+        <a href="doyouknow.html">애완동물이해하기</a>
+        <a href="pets.html">반려견보기</a>
+        <a href="adoption.html"><span>입양신청</span></a>
+        <a href="heart.html">관심반려견</a>
+        <a href="search.html">반려견검색</a>
+    </nav>
+    <main>
+        <h3 style="margin-top: 15px;">
+            입양신청
+        </h3>
+        <div id="caution">
+            <h4>
+                신청서 작성 시 유의 사항
+            </h4>
+            <ul>
+                <li>
+                    신청자분의 이름, 전화번호, 주소, 신청 사유를 작성합니다.
+                <li style="text-decoration: underline 1px solid black;">
+                    별표(*)가 표시된 항목은 필수 입력 항목입니다.
+                </li>
+                </li>
+                <li>
+                    '신청'을 눌러 신청을 진행하거나 '초기화'를 눌러 입력한 내용을 전부 지울 수 있습니다.
+                </li>
+                <li>
+                    신청 후 신청 내용은 수정할 수 없으니 신중하시기 바랍니다.
+                    <ul>
+                        <li>
+                            신청 내용에 부적절한 표현이 있을 경우 관계 법령에 의거 형사 처벌될 수 있습니다.
+                        </li>
+                        <li>
+                            <span style="color: red; font-weight: bold;">
+                                부정확한 정보를 입력하여 발생하는 모든 불이익은 신청자 본인에게 있습니다.
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    신청서 내용을 검토하여 '031-000-0000'에서 작성한 전화번호로 문자를 드립니다.
+                </li>
+                <ul>
+                    <li>
+                        <span style="color: red; font-weight: bold;">
+                            해당 신청은 최종 심사가 아니며, 검토 결과에 따라 신청이 반려될 수 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <div id="application">
+            <table>
+                <!-- 유효성 검사 결과에 따른 main 태그 height 변화를 방지하기 위해 visibility 속성 활용 -->
+                <caption style="color: red; visibility: hidden;">caution message</caption>
+                <!-- 
+                    신청 버튼을 눌렀을 때 데이터를 전송하기 위해, method get 및 action savedata 속성의 form 태그 사용
+                -->
+                <form id="applyform" method="get" action="savedata">
+                    <tr>
+                        <th colspan="4">
+                            신청자 연락 정보
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">
+                            신청자 이름<span class="req">*</span>
+                        </td>
+                        <td style="width: 30%;">
+                            <input type="text" name="name" id="nametext" required>
+                        </td>
+                        <td style="width: 20%;">
+                            신청자 전화번호<span class="req">*</span>
+                        </td>
+                        <td style="width: 30%;">
+                            <input type="tel" name="tel" id="teltext" placeholder="'-'없이 숫자만 작성하십시오.">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            신청자 주소<span class="req">*</span>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" name="addr" id="addrtext">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            신청 사유
+                        </td>
+                        <td colspan="3">
+                            <textarea style="resize: none; height: 100px;" name="reasontext"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            신청자의 가족 사항
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>직접적인 입양 경험이<br>있습니까?<span class="req">*</span></td>
+                        <td>
+                            <input type="radio" name="experience" id="exp_y" value="y">있음
+                            <input type="radio" name="experience" id="exp_n" value="n">없음
+                        </td>
+                        <td>어떤 주거지에<br>거주하고 있습니까?<span class="req">*</span></td>
+                        <td>
+                            <select id="hometype">
+                                <option value="apt">아파트/빌라/오피스텔</option>
+                                <option value="house">주택</option>
+                                <option value="etc">기타</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>가족 구성원이<br>반려견 입양을 동의했습니까?<span class="req">*</span></td>
+                        <td>
+                            <input type="radio" name="agreement" class="agr_radio" value="y">예
+                            <input type="radio" name="agreement" class="agr_radio" value="n">아니오
+                            <input type="radio" name="agreement" class="agr_radio" value="h">부분 동의
+                        </td>
+                        <td>가족 구성원에 반려견에 알레르기가 있는 사람이 있습니까?<span class="req">*</span></td>
+                        <td>
+                            <input type="radio" name="alergy" class="alg_radio" value="y">예
+                            <input type="radio" name="alergy" class="alg_radio" value="n">아니오
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            반려 동물 관리
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            반려 동물 관리는 중요합니까?<span class="req">*</span><br>(털, 접종, 산택, 훈련 등)
+                        </td>
+                        <td>
+                            <input type="radio" name="care" class="care_radio" value="y">중요하다
+                            <input type="radio" name="care" class="care_radio" value="n">중요하지 않다
+                            <input type="radio" name="care" class="care_radio" value="h">몰랐다
+                        </td>
+                        <td>
+                            후속 보고를 목적으로<br>사진 제공에 동의하십니까?<span class="req">*</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="photo_agree" class="p_agr_radio" value="y">예
+                            <input type="radio" name="photo_agree" class="p_agr_radio" value="n">아니오
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            유의 사항
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            주의 사항:
+                        </td>
+                        <td colspan="3" id="attention" style="text-align: left;">
+                            <div id="attention">
+                                <small>
+                                    이 신청서를 작성하는 것은 Momentum Pet에서 반려견을 구입하는 과정의 한 단계이지만 이 프로그램을 통해 반려견을 갖게 될 수 있다는 보장은
+                                    없습니다.
+                                    가능성은 낮지만 사육사는 언제든지 반려견 분양을 거부할 권리가 있습니다. <b>승인 및 보증금:</b> 신청서는 접수 후 영업일 기준 2일 이내에
+                                    검토되며
+                                    접수된 순서대로 처리됩니다. 귀하의 가정이 적합한 것으로 판정되면 통보해 드릴 것입니다. 저희는 사육을 잘 안 하기 때문에 반려견이 생기거나 있을
+                                    경우에만
+                                    보증금을 수락합니다. 승인된 가정은 임보 기간 동안 강아지에 대한 보증금을 지불할 수 있는 링크를 받게 되며 그것은 승인된 신청서가 접수된 순서대로
+                                    발송됩니다. 해당 승인 이메일을 받은 후 48시간 이내에 보증금을 입금해 주십시오. <b>귀하의 반려견 선택:</b> 반려견은 신청서에 표시된 대로
+                                    기업으로부터의 첫 번째 그리고 두 번째 추천에 따라 순서대로 지정됩니다. 둘 중 어느 것도 선택할 수 없는 경우 다른 반려견을 선택할 수 있습니다.
+                                    선택
+                                    기회를 기다리는 다른 가족이 있을 수 있으므로 통지 후 24시간 이내에 선택을 해주시기 바랍니다. 만약 반려견을 데려가지 않기로 선택한 경우 보증금은
+                                    몰수되고
+                                    반려견을 위한 다른 집을 찾는데 쓰인 비용에 충당됩니다. 귀하는 웹사이트에서 업데이트 사항이 있는지 확인하고 보증금 정책과 관련 규정들을 모두 검토해야
+                                    합니다. <b>집으로 가기:</b> 저희는 반려견들을 오랫동안 데리고 있을 수 없습니다. 반려견들의 사교성 교육을 위해 적절한 시간 내에 분양 보내는
+                                    것이
+                                    매우 중요합니다. 큰 휴가가 계획되어 있거나 어린 반려견과 맞지 않는 일이 있는 경우 전체 예방 접종과 광견병 예방 접종을 받을 때까지 귀하의 반려견은
+                                    사육장에 들어갈 수 없음을 알아주십시오. <b>계약:</b> 저희는 계약을 하는데 있어서 서로에 대한 의무 사항들을 기록하는 것이 수반되어야 하므로 본
+                                    계약서는 그런 이유로 조금 길 수 있습니다. 계약서 내 특정 용어에 대해 질문이 있는 경우 반려견을 픽업하기 전 당사에 문의해야 합니다.
+                                    <b>중성화:</b>
+                                    18개월 또는 그 이전에 중성화가 필요합니다. 귀하가 사육자라면 아마 다른 곳을 찾아야 할 것입니다. 언뜻 보기에는 위선적으로 보일 수 있지만
+                                    계약서에는 회수
+                                    조항이 있습니다. 저희의 모든 반려견은 언제든지 여기로 돌아올 수 있는 집이 있으며 보호소에서의 스트레스와 두려운 생활을 절대로 경험하게 하지 않을
+                                    것입니다.
+                                    중성화 되지 않은 반려견을 집으로 데려가는 것은 반려견의 성병과 임신할 수 있는 가능성으로 인해 저희의 반려견들에게 상당한 위험을 초래할 수 있습니다.
+                                    슬프게도, 많은 좋으신 분들이 첫 번째 발정주기 전에 반려견들을 중성화 하는 것을 잊어버리고 그로 인해 성체가 되지 않은 상태에서 알 수 없는 여러
+                                    품종의
+                                    개들에 의해 임신하게 됩니다. 임신 중 중성화 수술은 매우 위험하며 브루셀라증과 같은 여러 종류의 성병이 사람에게도 옮겨질 수 있어 모두에게 큰 위험이
+                                    될 수
+                                    있습니다. 저희는 저희의 반려견들에 대해 출생에서 사망까지 하나의 사육자가 책임을 지기 때문에 보호자의 동의 하에 있지 않는 한 반려견들을 중성화 해야
+                                    합니다.
+                                </small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            위 주의사항을 숙지하였습니까?<span class="req">*</span>
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" name="att_understand" class="att_und_radio" value="y">예
+                            <input type="radio" name="att_understand" class="att_und_radio" value="n">아니오
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            우리 기업에서 신청에 관하여 알아야 할 정보가 있다면 알려주십시오.
+                        </td>
+                        <td colspan="2">
+                            <textarea style="resize: none; height: 100px;" name="moreinfo" id="moreinfotext"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <!-- 유효성을 만족한 데이터만 전송하기 위해 input:submit 대신 input:button 사용 -->
+                            <input type="button" value="신청">
+                            <input type="reset" value="초기화">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </main>
+    <footer id="footer">
+        <small>
+            상호명 : Momentum Pet<br>
+            대표자 : 홍길동<br>
+            주소 : 경기도 수원시 팔달구 중부대로104 (풍림빌딩 신관, 3층)<br>
+            사업자등록번호 : 000-00-00000<br>
+            동물판매허가번호 : 0000000-000-0000-0000
+        </small>
+    </footer>
+</body>
+
+</html>
+
+<script>
+
+    /* 추가되는 입력란이 없으므로 const 자료형 사용하여 변수 선언 */
+    const applyData = $('#application input[type=text]');
+    const applyRadioData = $('#application input[type=radio]');
+
+    $('td input[type=button]').on('click', function () { erase(); validation(); });
+    $('td input[type=reset]').on('click', function () { erase(); });
+
+    function erase() {
+        for (let i = 0; i < applyData.length; i++) {
+            /* 입력란의 css 기존 상태로 초기화 */
+            applyData.eq(i).css('border', '1px solid gray');
+        }
+        /* caption 태그의 css 기존 상태로 초기화 */
+        $('table caption').css('visibility', 'hidden');
+        $('table caption').text('caution message');
+    }
+
+    /* 유효성 검사 함수. 입력 값이 없거나, 입력 값이 공백으로만 이루어졌거나, 전화번호 입력 값에 숫자 제외 문자가 있을 경우 재입력 유도. */
+    function validation() {
+        let flag = false;
+        let cnt = 0;
+        $.each(applyData, function (i, item) {
+            if (item.value.length != 0) { /* 입력 값이 있을 경우 */
+                let spCnt = 0; /* 입력 값의 공백 개수 저장 위해 변수 spCnt 선언. */
+                for (let j = 0; j < item.value.length; j++) {
+                    if (item.value.charAt(j) == " ") { spCnt++; }
+                }
+                if (spCnt != item.value.length) {
+                    cnt++;
+                }
+            }
+        });
+        let telValid = /^[0-9]*$/; /* 전화번호 입력란에 대한 유효성 검사 위해 정규식 사용 (숫자만 입력 가능) */
+        if (telValid.test($('#teltext').val())) { /* 전화번호 입력란 값의 정규식 만족 여부 확인 위해 test() 함수 사용 */
+            cnt++;
+            $.each(applyRadioData, function (i, item) {
+                if (item.checked) {
+                    cnt++;
+                }
+            });
+        }
+        if (cnt == 9) {
+            $('form').submit(); /* 유효성을 모두 만족할 경우 submit()함수를 통해 form 태그 내의 데이터 전송 */
+        } else {
+            $('table caption').css('visibility', 'visible');
+            $('table caption').text('입력되지 않거나 공백으로 입력된 항목이 존재합니다. 또는 전화번호가 숫자로만 이루어지지 않았습니다.');
+        }
+    }
+
+</script>

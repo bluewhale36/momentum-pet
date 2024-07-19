@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/heart_table.css">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<body>
+    <table id="heart_table">
+        <thead>
+            <tr>
+                <th scope="col" style="width: 10%;"><input type="checkbox" name="allchkvar" id="allchk"></th>
+                <th scope="col" style="width: 20%;">이름</th>
+                <th scope="col" style="width: 20%;">품종</th>
+                <th scope="col" style="width: 20%;">등록일</th>
+                <th scope="col">사진</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="chk" class="chkbox"></td>
+                <td>Tigger</td>
+                <td>cat / unknown</td>
+                <td>2024. 10. 10</td>
+                <td class="td_img"><img src="./img/cat1.jpg"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" class="chkbox"></td>
+                <td>Cheese</td>
+                <td>cat / unknown</td>
+                <td>2024. 10. 10</td>
+                <td class="td_img"><img src="./img/cat3.jpg"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" class="chkbox"></td>
+                <td>Oreo</td>
+                <td>cat / unknown</td>
+                <td>2024. 10. 10</td>
+                <td class="td_img"><img src="./img/cat4.jpg"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" class="chkbox"></td>
+                <td>Lucy</td>
+                <td>cat / unknown</td>
+                <td>2024. 10. 10</td>
+                <td class="td_img"><img src="./img/cat5.jpg"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chk" class="chkbox"></td>
+                <td>Max</td>
+                <td>dog / unknown</td>
+                <td>2024. 10. 10</td>
+                <td class="td_img"><img src="./img/dog2.jpg"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    //모든 체크박스 상태 한번에 변경
+    $('#allchk').on('click', () => {
+        let status = $('#allchk').is(':checked');
+        $('.chkbox').prop('checked', status);
+    });
+
+    //체크박스 체크 여부 확인하여 상태 변경
+    $('.chkbox').on('click', () => { checked(); });
+
+    function checked() {
+        let chkbox = $('.chkbox');
+        let chkcnt = 0;
+        for (var i = 0; i < chkbox.length; i++) {
+            if (chkbox.eq(i).is(':checked')) { chkcnt++; }
+        }
+        if (chkcnt == chkbox.length) {
+            $('#allchk').prop('checked', true);
+        } else {
+            $('#allchk').prop('checked', false);
+        }
+    }
+</script>

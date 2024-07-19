@@ -1,0 +1,179 @@
+html {
+    overflow-x: none;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+main {
+    display: block;
+    width: auto;
+    height: fit-content;
+    padding: 15px;
+    text-align: center;
+}
+
+#header {
+    display: block;
+    width: auto;
+    height: 150px;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 3px;
+}
+
+#header h1 {
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+}
+
+#member a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    color: black;
+    margin-left: 10px;
+}
+
+#member a:hover {
+    transition-duration: 250ms;
+    box-shadow: 0px 3px 0px black;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px / 0px 0px 5px 5px;
+    box-shadow: 0px 3px 5px rgba(197, 197, 197, 0.555);
+}
+
+#nav a {
+    border: none;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+}
+
+a span {
+    font-weight: bolder;
+    box-shadow: 0px 5px 0px cornflowerblue;
+}
+
+#nav a:hover {
+    transition-duration: 250ms;
+    box-shadow: 0px 3px 0px cornflowerblue;
+    font-weight: bold;
+}
+
+
+
+#searcharea {
+    float: left;
+}
+
+#heartarea {
+    float: right;
+    max-height: 1000px;
+    overflow: auto;
+}
+
+.area {
+    display: inline-block;
+    width: 49.5%;
+    height: inherit;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+#searcharea_top {
+    margin: 10px 0px;
+}
+
+#searcharea table {
+    display: inline-block;
+    width: auto;
+    height: fit-content;
+    border-collapse: collapse;
+}
+
+#searcharea th {
+    height: fit-content;
+    border-bottom: 3px solid black;
+}
+
+#searcharea td {
+    height: fit-content;
+    vertical-align: top;
+    border-bottom: 1px solid black;
+}
+
+#searcharea th,td {
+    padding: 10px 0px;
+}
+
+#searcharea .table_img {
+    width: 35%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#searcharea .table_img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#searcharea .heart_btn {
+    border: none;
+    background-color: transparent;
+}
+
+#searcharea .heart_btn:hover {
+    transition-duration: 250ms;
+    color: red;    
+}
+
+
+
+#heartarea_top {
+    margin: 13px 0px;
+}
+
+
+
+
+#confbtn {
+    clear: both;
+    display: block;
+    width: auto;
+    height: fit-content;
+
+}
+
+
+#footer {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(226, 226, 226);
+}
+
+#footer small {
+    color: rgb(177, 177, 177);
+}

@@ -1,0 +1,149 @@
+html {
+    overflow-x: none;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: block;
+    width: auto;
+    height: fit-content;
+    padding: 15px;
+    text-align: center;
+}
+
+#header {
+    display: block;
+    width: auto;
+    height: 150px;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 3px;
+}
+
+#header h1 {
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+}
+
+#member a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    color: black;
+    margin-left: 10px;
+    z-index: 0;
+}
+
+#member a:hover {
+    transition-duration: 250ms;
+    box-shadow: 0px 3px 0px black;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px / 0px 0px 5px 5px;
+    box-shadow: 0px 3px 5px rgba(197, 197, 197, 0.555);
+}
+
+#nav a {
+    border: none;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+}
+
+a span {
+    font-weight: bolder;
+    box-shadow: 0px 5px 0px cornflowerblue;
+}
+
+#nav a:hover {
+    transition-duration: 250ms;
+    box-shadow: 0px 3px 0px cornflowerblue;
+    font-weight: bold;
+}
+
+#caution {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding-top: 19px;
+    height: fit-content;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+#application {
+    display: block;
+    width: inherit; /* 부모 element인 main 태그의 너비를 따라가도록 inherit 옵션 사용 */
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#application table {
+    display: inline-block; /* margin-left -right : auto 를 사용하지 않고 화면에서 가운데에 배치하기 위해 사용 */
+    width: 95%;
+    height: fit-content;
+    text-align: center;
+    vertical-align: middle; /* element가 수직으로 가운데에 있도록 하기 위해 사용 */
+}
+
+.req{
+    color: red;
+}
+
+caption {
+    text-align: left; /* 브라우저에 관계 없이 왼쪽 정렬시키기 위해 명시 */
+}
+
+/* '신청' 및 '초기화' 버튼 제외의 입력란(textarea, input:text,:tel)을 선택하기 위해 :not() 사용 */
+td :not(input[type=button], input[type=reset], input[type=radio], b, span) {
+    float: left;
+    width: calc(100% - 1px); /*td 태그 내에서 오른편으로 초과하여 벗어나지 않도록 하기 위해 사용*/
+    border: 1px solid gray; /* 테이블 셀의 보더와 차이를 주기 위해 gray로 정의 */
+}
+
+tr, td {
+    border-collapse: collapse; /* 이중 선 방지 위해 사용 */
+    border: 1px solid rgb(0, 0, 0);
+}
+
+input[type=radio] {
+   margin: 0px 3px;
+}
+
+#attention {
+    width: 100%;
+    max-height: 200px !important;
+    overflow: auto;
+}
+
+#footer {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(226, 226, 226);
+}
+
+#footer small {
+    color: rgb(177, 177, 177);
+}
