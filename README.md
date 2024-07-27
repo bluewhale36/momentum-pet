@@ -34,7 +34,7 @@ Momentum Pet 프로젝트는, 이러한 시대 흐름을 반영한 시스템을 
 
 ## 요구사항 정의서
 
-<img width="75%" src="https://github.com/user-attachments/assets/9635a889-1d53-45ea-8775-8d99294e8815"/>
+<img src="https://github.com/user-attachments/assets/9635a889-1d53-45ea-8775-8d99294e8815"/>
 
 
 <br>
