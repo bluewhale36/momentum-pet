@@ -42,8 +42,16 @@ Momentum Pet 프로젝트는, 이러한 시대 흐름을 반영한 시스템을 
 ## 주요 기능
 
 ### JavaScript
-- JavaScript와 jQuery를 이용하여 DOM 객체 선택 및 제어.
-  - jQuery `$(선택자)` 를 이용하여 DOM 객체 선택.
-  - JavaScript를 이용하여 input 객체 value 유효성 확인.
+- JavaScript와 jQuery를 이용하여 DOM 객체를 선택 및 제어함.
+  - jQuery `$(선택자)` 를 이용하여 DOM 객체를 선택함.
+  - JavaScript를 이용하여 `input` 객체의 `value` 유효성을 확인힘.
 ### Kakao Local API
-- Kakao Local API를 이용하여 특정 위치를 지도에 표시.
+- Kakao Local API를 이용하여 특정 위치를 지도에 표시하고 DOM 객체로 렌더링함.
+
+<br/>
+
+## 성과
+- HTML DOM 구조를 이해하고 활용함.
+- CSS 로 HTML Element 의 스타일을 변경함.
+- JavaScript 로 DOM 구조를 제어함.
+- 외부 API 사용을 경험함.
